@@ -18,6 +18,14 @@ module.exports = function(grunt) {
       }
     },
 
+    less: {
+      style: {
+        files: {
+          'build/css/style.css': 'less/style.less'
+        }
+      }
+    },
+
     browserSync: {
       build: {
         bsFiles: {
@@ -45,7 +53,8 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', [
     'clean',
-    'copy'
+    'copy',
+    'less'
   ]);
 
   grunt.registerTask('serve', [
