@@ -1,0 +1,15 @@
+{
+  "name": "design-agency",
+  "version": "1.0.0",
+  "description": "Лендинг для дизайнерского агентства",
+  "author": "Roman Stepanov",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stepanov-roman/design-agency.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stepanov-roman/design-agency/issues"
+  },
+  "homepage": "https://github.com/stepanov-roman/design-agency#readme"
+}
