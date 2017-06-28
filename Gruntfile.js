@@ -32,6 +32,14 @@ module.exports = function(grunt) {
           ],
           dest: 'build/'
         }]
+      },
+      html5shiv: {
+        files: [{
+          expand: true,
+          cwd: 'node_modules/html5shiv/dist/',
+          src: 'html5shiv.min.js',
+          dest: 'build/js/'
+        }]
       }
     },
 
