@@ -15,6 +15,14 @@ module.exports = function(grunt) {
           src: '*.html',
           dest: 'build/'
         }]
+      },
+      normalize: {
+        files: [{
+          expand: true,
+          cwd: 'node_modules/normalize.css/',
+          src: 'normalize.css',
+          dest: 'build/css/'
+        }]
       }
     },
 
@@ -30,7 +38,8 @@ module.exports = function(grunt) {
       build: {
         bsFiles: {
           src: [
-            'build/*.html'
+            'build/*.html',
+            'build/css/*.css'
           ]
         },
         options: {
@@ -47,6 +56,15 @@ module.exports = function(grunt) {
       html: {
         files: '*.html',
         tasks: 'copy:html'
+      },
+      style: {
+        files: 'less/**/*.less',
+        tasks: [
+          'less'
+        ],
+        options: {
+          spawn: false
+        }
       }
     }
   });
