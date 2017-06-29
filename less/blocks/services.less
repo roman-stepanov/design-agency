@@ -1,0 +1,67 @@
+.services__list {
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 70px 0px 0px 0px;
+}
+
+.services-item {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin: 0px 0px 40px 0px;
+  padding: 70px 25px 0px 25px;
+  width: 195px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 90px;
+    width: 65px;
+    height: 65px;
+    background-image: url("../img/services.png");
+    background-repeat: no-repeat;
+  }
+
+  &--branding::before {
+    background-position: -5px -5px;
+  }
+
+  &--photography::before {
+    background-position: -80px -5px;
+  }
+
+  &--ui-ux::before {
+    background-position: -155px -5px;
+  }
+
+  &--ideas::before {
+    background-position: -230px -5px;
+  }
+}
+
+.services-item__title {
+  color: @clr_white;
+  font-family: @fnt_Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0px 0px 10px 0px;
+}
+
+.services-item__info {
+  color: @clr_white;
+  font-family: @fnt_Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 1;
+  text-align: center;
+  margin: 0;
+  padding: 0px 0px 10px 0px;
+}
