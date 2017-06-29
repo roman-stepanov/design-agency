@@ -41,6 +41,14 @@ module.exports = function(grunt) {
           src: 'html5shiv.min.js',
           dest: 'build/js/'
         }]
+      },
+      jquery: {
+        files: [{
+          expand: true,
+          cwd: 'node_modules/jquery/dist/',
+          src: 'jquery.min.js',
+          dest: 'build/js/'
+        }]
       }
     },
 
