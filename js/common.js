@@ -5,6 +5,11 @@ $(document).ready(function() {
 
   var contentSections = $('.content-section');
 
+  var projects = $('#works');
+  var projectsFilter = projects.find('.projects-filter');
+  var projectsActiveFilter = projectsFilter.find('.projects-filter__link--active');
+  var projectsGrid = projects.find('.projects-grid');
+
   var home = $('#home');
   var btnKnowMore = home.find('a[href="#about"]');
 
@@ -24,6 +29,17 @@ $(document).ready(function() {
     });
   };
 
+  var updateProjectsGrid = function() {
+    projectsGrid.animate(
+      {opacity: 0}, 500,
+      function() {
+        projectsGrid.animate(
+          {opacity: 1}, 500
+        );
+      }
+    );
+  };
+
   var onScrollWindow = function() {
     if ($(window).scrollTop() >= navigationTopPosition) {
       navigation.addClass('main-nav--fixed');
@@ -37,12 +53,24 @@ $(document).ready(function() {
     evt.preventDefault();
     var target = $(this.hash);
 
-    $('body').animate(
+    $('body, html').animate(
       {'scrollTop': target.offset().top - navigationHeight + 2}, 600
     );
+  };
+
+  var onClickProjectsFilter = function(evt) {
+    evt.preventDefault();
+    var target = $(this);
+
+    projectsActiveFilter.removeClass('projects-filter__link--active');
+    target.addClass('projects-filter__link--active');
+    projectsActiveFilter = target;
+
+    updateProjectsGrid();
   };
 
   $(window).on('scroll', onScrollWindow);
   navigation.find('a').on('click', onClickNavigation);
   btnKnowMore.on('click', onClickNavigation);
+  projectsFilter.find('a').on('click', onClickProjectsFilter);
 });
