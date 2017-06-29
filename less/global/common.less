@@ -3,3 +3,11 @@ body {
   background-color: @clr_bg-body;
   background-image: url("../img/bg-body.jpg");
 }
+
+.clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

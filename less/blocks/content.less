@@ -1,0 +1,130 @@
+.main-content {
+  position: relative;
+  margin: -611px auto -185px auto;
+  padding: 0;
+  width: @min-width;
+  box-shadow: 0px 0px 35px 10px @clr_black;
+}
+
+.content-section {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+
+  &--black {
+    background-color: @clr_black;
+  }
+
+  &--lightgray {
+    background-color: @clr_lightgray;
+  }
+
+  &--home {
+    padding: 135px 0px 163px 0px;
+    box-shadow: inset 0px -200px 130px 15px @clr_black;
+  }
+}
+
+.content-section__column-wrapper {
+  margin: 0;
+  padding: 0px 0px 0px 0px;
+  .clearfix();
+}
+
+.content-section__left-column {
+  float: left;
+  margin: 0;
+  padding: 30px 0px 35px 80px;
+  width: 390px;
+}
+
+.content-section__right-column {
+  float: right;
+  margin: 0;
+  padding: 0;
+  width: 490px;
+
+  &--about {
+    min-height: 420px;
+    background-image: url("../img/typewriter.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--team {
+    padding: 60px 50px 0px 0px;
+    width: 440px;
+  }
+}
+
+.content-section__title {
+  font-family: @fnt_PlayfairDisplay;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 65px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0px 0px 29px 0px;
+
+  .content-section--black & {
+    color: @clr_white;
+  }
+
+  .content-section--lightgray & {
+    color: @clr_black;
+  }
+
+  & span {
+    display: block;
+    color: @clr_orange;
+    font-weight: 400;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.content-section__paragraph {
+  font-family: @fnt_Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: justify;
+  margin: 0;
+  padding: 0px 0px 20px 0px;
+
+  .content-section--black & {
+    color: @clr_white;
+  }
+
+  .content-section--lightgray & {
+    color: @clr_black;
+  }
+}
+
+.content-section__numbering {
+  font-family: @fnt_Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 10px 10px 10px 10px;
+
+  .content-section--black & {
+    color: @clr_white;
+  }
+
+  .content-section--lightgray & {
+    color: @clr_black;
+  }
+
+  & b {
+    color: @clr_orange;
+    font-weight: 400;
+  }
+}
