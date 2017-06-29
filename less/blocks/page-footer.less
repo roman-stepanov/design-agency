@@ -1,0 +1,51 @@
+.page-footer {
+  margin: 0;
+  padding: 200px 0px 0px 0px;
+  background-color: @clr_black;
+}
+
+.page-footer__container {
+  margin: 0 auto;
+  padding: 0;
+  width: @min-width;
+}
+
+.page-footer__bottom-part {
+  margin: 0;
+  padding: 0;
+  .clearfix();
+}
+
+.page-footer__copyright {
+  float: left;
+  color: @clr_white;
+  font-family: @fnt_Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 1;
+  margin: 0;
+  padding: 20px 0px 20px 10px;
+
+  & a {
+    color: @clr_yellow;
+    text-decoration: none;
+    transition: color 0.5s;
+
+    &:hover {
+      color: @clr_lightyellow;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: @clr_orange;
+    }
+  }
+}
+
+.page-footer__socials {
+  float: right;
+  font-size: 0;
+  margin: 0;
+  padding: 14px 0px 4px 0px;
+}
